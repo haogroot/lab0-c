@@ -69,12 +69,10 @@ bool q_insert_head(queue_t *q, char *s)
     /* What should you do if the q is NULL? */
     newh = malloc(sizeof(list_ele_t));
     if (newh == NULL) {
-        free(newh);
         return false;
     }
     newh->value = malloc((sizeof(char) * strlen(s)) + 1);
     if (newh->value == NULL) {
-        free(newh->value);
         free(newh);
         return false;
     }
@@ -113,12 +111,10 @@ bool q_insert_tail(queue_t *q, char *s)
     /* What should you do if the q is NULL? */
     newh = malloc(sizeof(list_ele_t));
     if (newh == NULL) {
-        free(newh);
         return false;
     }
     newh->value = malloc((sizeof(char) * strlen(s)) + 1);
     if (newh->value == NULL) {
-        free(newh->value);
         free(newh);
         return false;
     }
